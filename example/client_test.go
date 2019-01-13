@@ -1,12 +1,14 @@
-package udshttp
+package example
 
 import (
 	"io/ioutil"
 	"testing"
+
+	"github.com/nuczzz/udshttp"
 )
 
 func TestClient(t *testing.T) {
-	client := NewUnixClient(defaultUnixAddr)
+	client := udshttp.NewUnixClient(udshttp.DefaultUnixAddr)
 	resp, err := client.Get("http://unix/index")
 	if err != nil {
 		t.Fatal(err)

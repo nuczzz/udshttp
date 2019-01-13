@@ -12,7 +12,7 @@ type UnixClient struct {
 
 func NewUnixClient(serverSock string) *UnixClient {
 	if serverSock == "" {
-		serverSock = defaultUnixAddr
+		serverSock = DefaultUnixAddr
 	}
 
 	return &UnixClient{
